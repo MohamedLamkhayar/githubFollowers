@@ -1,0 +1,17 @@
+<h1 [style.color]="isActive ? 'blue': 'red'">{{getTitle() | titlecase}}</h1>
+<ul>
+    <li *ngFor="let course of courses">{{course}}</li>
+</ul>
+<!--img src="{{image}}" alt="{{title}}"-->
+<img [src]="image"  [alt]="title">
+<div (click)="onClickDiv()">
+    <button (click)="onClick($event)" class="btn btn-primary" >ITIZEN</button>
+</div>
+<input [(ngModel)] = "email" type = "text" (keyup.enter)="onkeyup()">
+<p>{{email | resume : 7}}</p>
+<p>{{email | uppercase}}</p>
+<h1>{{person | json}}</h1>
+<h1>{{date}}</h1>
+<h2>{{date | date : 'short'}}</h2>
+
+
